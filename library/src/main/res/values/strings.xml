@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">library</string>
+
+    <!-- Network Response error -->
+    <string name="responseError">Response Error</string>
+    <string name="resend_code">Resend Code</string>
+</resources>
