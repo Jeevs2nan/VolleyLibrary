@@ -24,13 +24,6 @@ dependencies {
     
     
        
-    allprojects {
-    repositories {
-        jcenter()
-        maven { url "https://dl.bintray.com/jeevs2nan/Jeeva" }
-    }
-}
-
     
        
 ###Cloning First of all you will have to clone the library.
