@@ -89,7 +89,7 @@ public interface IRequestHandler {
      * @param e          enum which helps the segregate the responses
      * @param param      request to be send for the api
      *                   <p>
-     *                   {NOTE: Either the request can be send as Json object or Map<String, String>}
+     *                   {NOTE: Either the request can be send as Json object or Map}
      */
 
     void jsonObjectRequest(Context context, int method, String url, JSONObject jsonObject, IResponseListener listener, Enum e, Map<String, String> param);

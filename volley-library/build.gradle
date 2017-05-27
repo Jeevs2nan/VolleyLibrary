@@ -1,0 +1,83 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'java'
+
+//compileJava {
+//    //enable compilation in a separate daemon process
+//    options.fork = true
+//
+//    //enable incremental compilation
+//    options.incremental = true
+//}
+
+
+ext {
+    bintrayRepo = 'Jeeva'
+    bintrayName = 'volley-library'
+
+    publishedGroupId = 'com.jeeva'
+    libraryName = 'volley-library'
+    artifact = 'volley-library'
+
+    libraryDescription = 'This library helps to make the network api call easy.'
+
+    siteUrl = 'https://github.com/Jeevs2nan/VolleyLibrary'
+    gitUrl = 'https://github.com/Jeevs2nan/VolleyLibrary.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'Jeevs2nan'
+    developerName = 'Jeevanandhan M'
+    developerEmail = 'jeevs2nan@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    /*compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }*/
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+
+
+    //Volley...
+    compile 'com.android.volley:volley:1.0.0'
+
+    compile files("${System.properties['java.home']}/../lib/tools.jar")
+}
+
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
