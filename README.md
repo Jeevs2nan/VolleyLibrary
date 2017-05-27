@@ -18,9 +18,13 @@ This library make the api call easy using the Volley Framework. Current version 
 
 ###Gradle Add the following gradle dependency exchanging x.x.x for the latest release.
 
-dependencies {
-    compile 'com.jeeva:volley-library:x.x.x'
-    }
+
+
+<div class="highlight highlight-source-groovy"><pre>dependencies {
+    compile <span class="pl-s"><span class="pl-pds">'</span>com.jeeva:volley-library:x.x.x<span class="pl-pds">'</span></span>
+}</pre></div>
+
+
     
     
        
